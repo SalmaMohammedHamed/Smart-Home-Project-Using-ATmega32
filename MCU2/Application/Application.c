@@ -30,7 +30,7 @@ void Init()
 	GasSensor_voidDigitalInit(); //gas sensor initialization
 	LDR_voidInit();//LDR initialization
 	LM35_voidInit();//LM35 initialization
-	ADC_voidInit();//ADDC initialization
+	ADC_voidInit();//ADC initialization
 	LCD_voidInit();//LCD initialization
 	UART_voidInit(UARTBoudeRate);//UART initialization
 	UART_voidCallBack(RecieveNoPeople);//set the ISR of UART
@@ -101,6 +101,7 @@ void LightSystem()
 		LCD_voidSendNumber(Light);
 		if (Light>=LightLevel1)
 			{
+				T2_voidStop();
 				DIO_voidSetPinDir(LightGroup,LightPin,output);
 				DIO_voidSetPinValue(LightGroup,LightPin,Low);
 			}
@@ -118,6 +119,7 @@ void LightSystem()
 			}
 			else if (Light<LightLevel3)
 			{
+				T2_voidStop();
 				DIO_voidSetPinDir(LightGroup,LightPin,output);
 				DIO_voidSetPinValue(LightGroup,LightPin,High);
 			}
@@ -144,9 +146,6 @@ void FireFighterSystem()
 			LED_voidOff(FireExtigusherGruop,FireExtigusherPin);
 			BUZZER_voidOff();
 		}
-
-
-
 }
 
 void RecieveNoPeople()

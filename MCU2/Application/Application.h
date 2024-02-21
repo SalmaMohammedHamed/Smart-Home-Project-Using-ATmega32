@@ -21,10 +21,10 @@
 #define Temp4 40
 #define Temp5 45
 /*Lighting levels*/
-#define LightLevel1 2000
-#define LightLevel2 1000
-#define LightLevel3 500
-#define LightLevel4 400
+#define LightLevel1 4300
+#define LightLevel2 2500
+#define LightLevel3 600
+#define LightLevel4 200
 
 void Init();
 void AirConditioner();
