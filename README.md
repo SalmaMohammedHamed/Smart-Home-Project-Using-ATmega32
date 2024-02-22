@@ -1,7 +1,22 @@
 # Smart Home Project Using ATmega32
 
 
-Description of your project goes here.
+The Project consists of Two ATmega32 Microcontrollers
+MCU1:
+-If a user wants to enter the home he/she clicks on a button to see the enterfe screen
+-The user has 2 attemps to enter the password correctly
+-If the user enters an incorrect password 3 times, the screen prins "Wrong" and an alarm buzzer works for about 3 seconds
+-if the user enters a correct password the door "Servo Motor" opens  outomatically
+-when someone enters the home MCU1 sends this information for MCU2
+-there is a button inside the house to close/open the door from inside the house
+-if the door stayed open for about 5 seconds the door closed outomatically
+-if someone opens the door from inside and left the house MCU2 sends the number of people inside the house decreased
+
+MCU2:
+-MCU2 has 3 systems
+-fire fighter system: consists of gas sensor, led(represents fire extinguisher) and a warning buzzer. so when the sensor read =1 the buzzer and the fire extinguisherare on.(this system is working all time).
+-lighting system: consists of LDR and led. the led light level is relative to the light level in the room.(this system is only on when there is someone the house).
+-Air conditioner System: consists of LM35 and a led (represents the air conditioner).(this system is only on when there is someone the house).
 
 ---
 
