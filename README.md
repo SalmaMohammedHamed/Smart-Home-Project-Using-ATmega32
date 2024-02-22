@@ -96,6 +96,5 @@ Layers:
 ---
 ## vedios
 
- ([](https://drive.google.com/drive/folders/10I-2fsUfwLhYm-Tar9FM51uLZSgS3ID2?usp=sharing)
- 
+ [https://drive.google.com/drive/folders/10I-2fsUfwLhYm-Tar9FM51uLZSgS3ID2?usp=sharing]
 ---
