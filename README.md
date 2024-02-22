@@ -6,14 +6,17 @@ Description of your project goes here.
 ---
 
 ## Schematic 
-
-![fullschem](/fullschem.jpg)
 *Full Project Schematic*
----
-![mcu1](/mcu1.jpg)
 -
+![fullschem](/fullschem.jpg)
+-
+
+---
 *MCU 1: Smart Door System*
 -
+![mcu1](/mcu1.jpg)
+-
+
 
 Layers: 
 -     
@@ -35,10 +38,11 @@ Layers:
         
 
 ---
-![mcu2](/mcu2.jpg)
--
 *MCU 2: Smart Home System*
 -
+![mcu2](/mcu2.jpg)
+-
+
 
 Layers: 
 -       
@@ -61,7 +65,7 @@ Layers:
              - Timers Driver
              - UART Driver
        
-        OS:  - Operating System Driver 
+        OS:  - Operating System scheduler Driver 
         
 
 ---
