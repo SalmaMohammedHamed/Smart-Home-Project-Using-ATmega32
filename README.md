@@ -1,37 +1,76 @@
 # Smart Home Project Using ATmega32
 
+
 Description of your project goes here.
 
 ---
 
 ## Schematic 
 
-![Screenshot 1](/path/to/screenshot1.png)
-*Caption for Screenshot 1*
+![fullschem](/fullschem.jpg)
+*Full Project Schematic*
+---
+![mcu1](/mcu1.jpg)
+-
+*MCU 1: Smart Door System*
+-
 
-![Screenshot 2](/path/to/screenshot2.png)
-*Caption for Screenshot 2*
+Layers: 
+-     
+       App: - smart door Application Driver
+
+       HAL:  - Buzzer Driver
+             - KeyPad Driver
+             - LCD Driver
+             - Led Driver
+             - Servo Motor Driver
+             - Switch Driver
+             
+      MCAL:  - DIO Driver
+             - EXTI Driver
+             - GIE Driver
+             - SPI Driver
+             - Timers Driver
+             - UART Driver             
+        
 
 ---
+![mcu2](/mcu2.jpg)
+-
+*MCU 2: Smart Home System*
+-
 
-## Installation
+Layers: 
+-       
+       App: - smart Home Application Driver
 
-Instructions for installing your project.
+       HAL:  - Buzzer Driver
+             - Gas Sensor Driver
+             - LCD Driver
+             - LED Driver
+             - LDR Driver
+             - LM35 Driver
+             - Relay Driver
+             - Switch Driver
+             
+      MCAL:  - DIO Driver
+             - ADC Driver      
+             - EXTI Driver
+             - GIE Driver
+             - SPI Driver
+             - Timers Driver
+             - UART Driver
+        OS:  - Operating System Driver 
+        
 
 ---
+## Team Members
 
-## Usage
+ [Salma mohammed](https://www.linkedin.com/in/your-profile)
+ -
+ [Saad Elsokkary](https://www.linkedin.com/in/your-profile)
+ -
+ [Mohamed Ahmed Abdalaziem Abdullah](https://www.linkedin.com/in/mohamed-ahmed-33187b293)
+ -
 
-Instructions for using your project.
 
----
-
-## Contributing
-
-Guidelines for contributing to your project.
-
----
-
-## License
-
-This project is licensed under the [Your License](LICENSE) - see the [LICENSE](LICENSE) file for details.
