@@ -13,7 +13,6 @@ int main(void)
 
 
 	Init();
-	//LCD_voidSendData('a');
 
 
     while(1)
