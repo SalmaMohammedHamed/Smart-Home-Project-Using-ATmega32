@@ -192,3 +192,7 @@ void T0_voidPWMModeInit(u8 PWMType, u8 OC0State ,u8 Prescaller, u8 DutyCycle)
 
 }
 /***********************************************************************/
+void T0_voidStop()
+{
+	T0_TCCR0&=0xF8;
+}

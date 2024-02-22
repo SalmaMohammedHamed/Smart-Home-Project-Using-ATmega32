@@ -24,4 +24,6 @@ void T0_voidCallBackFuncCTCMode(void (*CTCpf)(void));
 /*******************************PWM**********************************/
 void T0_voidPWMModeInit(u8 PWMType, u8 OC0State ,u8 Prescaller, u8 DutyCycle);
 
+
+void T0_voidStop();
 #endif /* MCAL_TIMERS_TIMER0_T0_INTERFACE_H_ */

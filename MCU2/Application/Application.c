@@ -81,8 +81,9 @@ void AirConditioner()
 			DIO_voidSetPinValue(AirConditionerGroup,AirConditionerPin,High);
 		}
 	}
-	else
+	else if(NoPeople==0)
 	{
+		T0_voidStop();
 		DIO_voidSetPinDir(AirConditionerGroup,AirConditionerPin,output);
 		DIO_voidSetPinValue(AirConditionerGroup,AirConditionerPin,Low);
 	}
@@ -124,8 +125,9 @@ void LightSystem()
 				DIO_voidSetPinValue(LightGroup,LightPin,High);
 			}
 	}
-	else
+	else if (NoPeople==0)
 	{
+		T2_voidStop();
 		DIO_voidSetPinDir(LightGroup,LightPin,output);
 		DIO_voidSetPinValue(LightGroup,LightPin,Low);
 	}
