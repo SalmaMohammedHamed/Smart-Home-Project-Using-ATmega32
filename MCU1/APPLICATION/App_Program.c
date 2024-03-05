@@ -30,7 +30,7 @@ void init ()
 {
 	UART_voidInit(UARTBoudeRate); //UART initialization
 	_delay_ms(50); //delay it give UART enough time to be initialized
-	UART_voidSendData(NoPeople); //send 0 at the begin ing
+	UART_voidSendData(NoPeople); //send 0 at the beginning
 	KEYPAD_voidInit(); //Keypad initialization
 	ServoMotor_voidInit(); //Servo Motor initialization
 	BUZZER_voidInit();//Buzzer initialization
@@ -96,6 +96,7 @@ u8 check_password ()
 }
 void user_interface ()
 {
+	_delay_ms(250); //delay to prevent denouncing effect
 	pass_arr();   //put the password in an array
 	s8 counter=0;
 	LCD_voidSetPos(first_line_pos,0);
@@ -164,6 +165,7 @@ void WrongPassword()
 
 void CloseDoor()
 {
+	_delay_ms(250); //delay to prevent denouncing effect
 	ServoMotor_voidAntiClockWiseSlow(90,0); //servo motor function to close the door from angle 90 to 0
 	DoorPos=DoorClosed;//change the door position variable
 }
@@ -190,6 +192,7 @@ void OpenDoorFromInSide()
 
 void DoorControlFromInside()
 {
+	_delay_ms(250); //delay to prevent denouncing effect
 	if (NoPeople)
 	{
 		if (DoorPos==DoorOpen)
@@ -209,7 +212,7 @@ void DoorOpenTime()
 	static u32 counter=0;
 	/*the door will close after about 5 seconds
 	 if it wasn't already closed manually*/
-	if (counter==DoorOPenT||counter==(DoorOPenT+10)||counter==(DoorOPenT+20))/*in case that any higher
+	if (counter>= DoorOPenT && counter%10==0)/*in case that any higher
 		interrupt permitted the function from happening try to do it again in 10 clk cycles*/
 	{
 		if (DoorPos==DoorOpen)
@@ -228,8 +231,8 @@ void BuzzerOnTime()
 	/*the warning buzzer will work and the word "wrong"
 	 will appear on the screen for about 3 seconds*/
 	static u32 counter=0;
-	if (counter==BuzzerOnT||counter==(BuzzerOnT+10)||counter==(BuzzerOnT+20))/*in case that any higher
-		interrupt permitted the function from happening try to do it again in 10 clk cycles*/
+	if (counter>=BuzzerOnT && counter%10==0)/*in case that any higher priority
+		interrupt permitted the function from being executed try to do it again in 10 clk cycles*/
 	{
 		BUZZER_voidOff();
 		LCD_voidClear();
